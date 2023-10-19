@@ -59,3 +59,29 @@ const fillForm = function (event) {
       x.textContent = jsonData[5].timeframes[t].previous;
   });
 };
+
+const cardContainer = document.querySelectorAll('.card-container');
+
+cardContainer.forEach((x) =>
+  x.addEventListener('mouseover', (e) => {
+    e.target.closest('.card-container').classList?.add('cardmousehover');
+  })
+);
+
+cardContainer.forEach((x) =>
+  x.addEventListener('mouseout', (e) => {
+    e.target.classList.remove('cardmousehover');
+  })
+);
+
+document.addEventListener('mouseover', (e) => {
+  if (e.target.classList.contains('icon-ellipsis')) {
+    e.target.classList.add('mousehover');
+    e.target.closest('.card-container').classList?.remove('cardmousehover');
+  }
+});
+document.addEventListener('mouseout', (e) => {
+  if (e.target.classList.contains('icon-ellipsis')) {
+    e.target.classList.remove('mousehover');
+  }
+});

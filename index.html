@@ -31,22 +31,27 @@
       }
     </style>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module"></script>
   </head>
   <body>
     <div class="parent-flex-container">
       <div class="parent-grid-container">
         <div class="report-main-container">
           <div class="report-container">
-            <img src="images/image-jeremy.png" />
+            <img
+              id="jeremy-picture"
+              src="images/image-jeremy.png"
+              alt="Jeremy-picture"
+            />
             <div class="text">
               <p class="report-short-text">Report for</p>
               <p class="person-name">Jeremy Robson</p>
             </div>
           </div>
           <div class="report-period-flex">
-            <div class="daily">Daily</div>
-            <div class="weekly active">Weekly</div>
-            <div class="monthly">Monthly</div>
+            <div class="period daily">Daily</div>
+            <div class="period weekly active">Weekly</div>
+            <div class="period monthly">Monthly</div>
           </div>
         </div>
         <div class="card-parent-container card-work-container">
@@ -62,16 +67,18 @@
               />
             </div>
             <div class="card-flex-container card-work-flex-container-bottom">
-              <div class="hours">32hrs</div>
+              <div class="hours"><span class="current-period"></span>hrs</div>
               <div class="card-period">
                 <span class="card-period-text card-period">Last Week - </span
-                ><span class="card-period-text card-period-time">36hrs</span>
+                ><span class="card-period-text card-period-time"
+                  ><span class="previous-period"></span>hrs</span
+                >
               </div>
             </div>
           </div>
         </div>
         <div class="card-parent-container card-play-container">
-          <img class="banner-logo" src="images/icon-play.svg" alt="work" />
+          <img class="banner-logo" src="images/icon-play.svg" alt="play" />
           <div class="card-container card-play">
             <div class="card-flex-container card-play-flex-container-top">
               <div class="card-play-flex-1">Play</div>
@@ -83,16 +90,18 @@
               />
             </div>
             <div class="card-flex-container card-play-flex-container-bottom">
-              <div class="hours">10hrs</div>
+              <div class="hours"><span class="current-period"></span>hrs</div>
               <div class="card-period">
                 <span class="card-period-text card-period">Last Week - </span
-                ><span class="card-period-text card-period-time">8hrs</span>
+                ><span class="card-period-text card-period-time"
+                  ><span class="previous-period"></span>hrs</span
+                >
               </div>
             </div>
           </div>
         </div>
         <div class="card-parent-container card-study-container">
-          <img class="banner-logo" src="images/icon-study.svg" alt="work" />
+          <img class="banner-logo" src="images/icon-study.svg" alt="study" />
           <div class="card-container card-study">
             <div class="card-flex-container card-study-flex-container-top">
               <div class="card-study-flex-1">Study</div>
@@ -103,17 +112,23 @@
                 alt="work"
               />
             </div>
-            <div class="card-flex-container card-work-flex-container-bottom">
-              <div class="hours">4hrs</div>
+            <div class="card-flex-container card-study-flex-container-bottom">
+              <div class="hours"><span class="current-period"></span>hrs</div>
               <div class="card-period">
                 <span class="card-period-text card-period">Last Week - </span
-                ><span class="card-period-text card-period-time">7hrs</span>
+                ><span class="card-period-text card-period-time"
+                  ><span class="previous-period"></span>hrs</span
+                >
               </div>
             </div>
           </div>
         </div>
         <div class="card-parent-container card-exercise-container">
-          <img class="banner-logo" src="images/icon-exercise.svg" alt="work" />
+          <img
+            class="banner-logo"
+            src="images/icon-exercise.svg"
+            alt="exercise"
+          />
           <div class="card-container card-exercise">
             <div class="card-flex-container card-exercise-flex-container-top">
               <div class="card-exercise-flex-1">Exercise</div>
@@ -127,16 +142,18 @@
             <div
               class="card-flex-container card-exercise-flex-container-bottom"
             >
-              <div class="hours">4hrs</div>
+              <div class="hours"><span class="current-period"></span>hrs</div>
               <div class="card-period">
                 <span class="card-period-text card-period">Last Week - </span
-                ><span class="card-period-text card-period-time">5hrs</span>
+                ><span class="card-period-text card-period-time"
+                  ><span class="previous-period"></span>hrs</span
+                >
               </div>
             </div>
           </div>
         </div>
         <div class="card-parent-container card-social-container">
-          <img class="banner-logo" src="images/icon-social.svg" alt="work" />
+          <img class="banner-logo" src="images/icon-social.svg" alt="social" />
           <div class="card-container card-social">
             <div class="card-flex-container card-social-flex-container-top">
               <div class="card-social-flex-1">Social</div>
@@ -148,16 +165,22 @@
               />
             </div>
             <div class="card-flex-container card-social-flex-container-bottom">
-              <div class="hours">5hrs</div>
+              <div class="hours"><span class="current-period"></span>hrs</div>
               <div class="card-period">
                 <span class="card-period-text card-period">Last Week - </span
-                ><span class="card-period-text card-period-time">10hrs</span>
+                ><span class="card-period-text card-period-time"
+                  ><span class="previous-period"></span>hrs</span
+                >
               </div>
             </div>
           </div>
         </div>
         <div class="card-parent-container card-selfcare-container">
-          <img class="banner-logo" src="images/icon-self-care.svg" alt="work" />
+          <img
+            class="banner-logo"
+            src="images/icon-self-care.svg"
+            alt="selfcare"
+          />
           <div class="card-container card-self-care">
             <div class="card-flex-container card-selfcare-flex-container-top">
               <div class="card-selfcare-flex-1">Self Care</div>
@@ -171,10 +194,12 @@
             <div
               class="card-flex-container card-selfcare-flex-container-bottom"
             >
-              <div class="hours">2hrs</div>
+              <div class="hours"><span class="current-period"></span>hrs</div>
               <div class="card-period">
                 <span class="card-period-text card-period">Last Week - </span
-                ><span class="card-period-text card-period-time">2hrs</span>
+                ><span class="card-period-text card-period-time"
+                  ><span class="previous-period"></span>hrs</span
+                >
               </div>
             </div>
           </div>

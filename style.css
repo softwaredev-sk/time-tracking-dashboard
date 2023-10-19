@@ -30,10 +30,13 @@ body {
   background-color: var(--very-dark-blue-color);
 }
 
-img {
+/* img */
+#jeremy-picture {
   float: left;
   width: 60px;
   height: auto;
+  border: 2px solid white;
+  border-radius: 50%;
 }
 
 .parent-flex-container {
@@ -59,6 +62,7 @@ img {
   border: 1px solid black;
   border-radius: 15px;
   background-color: var(--dark-blue-color);
+  max-width: 400px;
 }
 
 .report-container {
@@ -69,7 +73,8 @@ img {
   font-size: 0.8em;
   font-weight: 300;
   padding: 30px 10px;
-  background-color: var(--violet-social-color);
+  /* background-color: var(--violet-social-color); */
+  background-color: var(--blue-color);
   border-radius: 15px;
 }
 .text {
@@ -88,6 +93,7 @@ img {
 
 .active {
   color: white;
+  font-weight: 400;
 }
 
 .report-short-text {
@@ -101,6 +107,7 @@ img {
 .card-parent-container {
   border-radius: 15px;
   width: 90vw;
+  max-width: 400px;
 }
 
 .card-work-container {
@@ -140,6 +147,7 @@ img {
 
 .hours {
   font-size: 1.5em;
+  font-weight: 300;
 }
 
 .card-period-text {
@@ -151,12 +159,17 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
 }
 
 .banner-logo {
   float: right;
   position: relative;
   right: 15px;
+}
+
+img[alt='social'] {
+  height: 50px;
 }
 
 .icon-ellipsis {
@@ -167,4 +180,109 @@ img {
   position: relative;
   bottom: -30px;
   padding-bottom: 20px;
+}
+
+.period {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1440px) {
+  .parent-flex-container {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .parent-grid-container {
+    grid-template-columns: auto auto auto auto;
+    /* grid-template-columns: repeat(4, 1fr); */
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+  }
+
+  /* .parent-grid-container > div {
+    width: auto;
+    max-width: 300px;
+  } */
+
+  .report-main-container {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: 100%;
+    width: 100%;
+  }
+
+  .report-container {
+    padding: 0 0 10px 5px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0;
+    height: 70%;
+  }
+
+  /* .person-name {
+    font-size: 2em;
+    padding: 10px;
+    word-wrap: break-word;
+  } */
+
+  .text {
+    padding: 20px;
+    width: 200px;
+  }
+
+  .text > .person-name {
+    font-size: 2.5em;
+    word-wrap: break-word;
+  }
+
+  #jeremy-picture {
+    margin: 20px;
+  }
+
+  /* img {
+    margin: 20px;
+  } */
+  .banner-logo,
+  img[alt='social'] {
+    height: 65px;
+  }
+
+  .card-parent-container {
+    width: 250px;
+  }
+
+  .hours {
+    margin-bottom: 5px;
+    /* font-size: 2.5em; */
+  }
+
+  .report-period-flex {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .report-period-flex > div {
+    margin-top: 10px;
+  }
+
+  .card-work-flex-container-bottom,
+  .card-play-flex-container-bottom,
+  .card-study-flex-container-bottom,
+  .card-exercise-flex-container-bottom,
+  .card-social-flex-container-bottom,
+  .card-selfcare-flex-container-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding-top: 10px;
+  }
+
+  .attribution {
+    display: none;
+  }
 }

@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repository](https://github.com/softwaredev-sk/time-tracking-dashboard)
-- Live Site URL: [Live Site](https://softwaredev-sk.github.io/time-tracking-dashboard/)
+- Live Site URL: [Live Site](https://time-tracking-dashboard-sk.vercel.app/)
 
 ## My process
 

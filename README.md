@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github Repository](https://github.com/develover-sk/time-tracking-dashboard)
-- Live Site URL: [Live Site](https://develover-sk.github.io/time-tracking-dashboard/)
+- Solution URL: [Github Repository](https://github.com/softwaredev-sk/time-tracking-dashboard)
+- Live Site URL: [Live Site](https://softwaredev-sk.github.io/time-tracking-dashboard/)
 
 ## My process
 
@@ -58,5 +58,5 @@ I'll be pixel perfecting this design to accomodate exact same as the challenge.
 ## Author
 
 - Website - [Shailendra Kumar](https://www.shailendra.xyz)
-- Frontend Mentor - [@develover-sk](https://www.frontendmentor.io/profile/develover-sk)
+- Frontend Mentor - [@softwaredev-sk](https://www.frontendmentor.io/profile/softwaredev-sk)
 - Twitter - [@shailendrakrsk\_](https://www.twitter.com/shailendrakrsk_)
